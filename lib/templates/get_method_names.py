@@ -22,12 +22,10 @@ def get_method_names(file_name: str, code: str):
             [
                 {
                     "description": [write description here],
-                    "external": [If this step calls external function, then write the function's name here]
+                    "external": [If this step calls external function, then write the function's name here],
+                    "path":[If this step calls external function, then write the function's path here]
                 }
             ],
-            "externals":{
-                [externalFunctoinName]:[Write the path to external function]
-            }
         }
     }
 
@@ -55,14 +53,9 @@ def get_method_names(file_name: str, code: str):
                 {
                     "description": "call 'CalledFuncA'",
                     "external" : "CalledFuncA"
+                    "path": "importSource.ts"
                 }
             ],
-            "externals":
-            [
-                {
-                    "CalledFuncA": "importSource.ts"
-                }
-            ]
         }
     }
     ----------------------------------------------------------------------

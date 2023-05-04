@@ -1,8 +1,15 @@
 import Axios from "axios";
 import { FC } from "react";
 
+type SimpleStep = { description: string };
+type ExternalStep = { description: string; path: string; external: string };
+type Book = {
+  [key: string]: {
+    [functionName: string]: { steps: [SimpleStep | ExternalStep] };
+  };
+};
 type Props = {
-  content: any;
+  content: Book;
 };
 const View: FC<Props> = ({ content }) => {
   console.log(content);
